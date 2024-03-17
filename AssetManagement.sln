@@ -5,9 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B23112C1-F8B1-479A-8843-22E900E854A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManager.Hid", "src\AssetManager.Hid\AssetManager.Hid.csproj", "{8787A614-5891-4BF1-A598-416FF32BC31A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement.Hid", "src\AssetManagement.Hid\AssetManagement.Hid.csproj", "{8787A614-5891-4BF1-A598-416FF32BC31A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagment.Web", "src\AssetManagment.Web\AssetManagment.Web.csproj", "{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement.Web", "src\AssetManagement.Web\AssetManagement.Web.csproj", "{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement.Console", "src\AssetManagement.Console\AssetManagement.Console.csproj", "{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +28,14 @@ Global
 		{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8787A614-5891-4BF1-A598-416FF32BC31A} = {B23112C1-F8B1-479A-8843-22E900E854A5}
 		{1BA3184B-733C-4A30-94F5-12D6DA9DD3A5} = {B23112C1-F8B1-479A-8843-22E900E854A5}
+		{93377E5C-B086-4D8E-9F2C-EC5BD718EEFF} = {B23112C1-F8B1-479A-8843-22E900E854A5}
 	EndGlobalSection
 EndGlobal
