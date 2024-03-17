@@ -22,8 +22,10 @@
 
 #define SHOW_CHANGES_ONLY
 
+using System;
 using System.Diagnostics;
-using HidSharp.Experimental;
+using System.Linq;
+using System.Threading;
 using HidSharp.Reports;
 using HidSharp.Reports.Encodings;
 using HidSharp.Utility;

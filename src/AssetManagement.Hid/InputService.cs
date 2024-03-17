@@ -1,3 +1,5 @@
+using System;
+
 namespace AssetManagement.Hid;
 
 public class InputService

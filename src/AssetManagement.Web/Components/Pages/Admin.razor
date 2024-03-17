@@ -1,6 +1,52 @@
 @page "/Admin"
+@using AssetManagement.Web.Models
+@using AssetManagement.Web.Services
+
+@inject UserManagementService UserManagementService
+@inject AssetManagementService AssetManagementService
+
 <h3>Admin</h3>
 
+<h2>Users</h2>
+@if (users == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+    @foreach (var user in users)
+    {
+        <li>@user.FirstName @user.LastName @user.Email</li>
+    }
+    </ul>
+}
+
+<h2>Assets</h2>
+@if (assets == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var asset in assets)
+        {
+            <li>@asset.Name</li>
+        }
+    </ul>
+}
+
 @code {
-    
+    private List<User>? users;
+    private List<Asset>? assets;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(500);
+
+        users = await UserManagementService.GetAllUsers();
+        assets = await AssetManagementService.GetAllAssets();
+    }
 }
