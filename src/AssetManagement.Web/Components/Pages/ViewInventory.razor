@@ -1,0 +1,21 @@
+@page "/view-inventory"
+@using AssetManagement.Web.Services
+
+@inject AssetManagementService AssetManagementService
+
+<MudText Typo="Typo.h1">View Inventory</MudText>
+
+<MudText Typo="Typo.h2">Assets</MudText>
+@if (_assets == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+<ul>
+    @foreach (var asset in _assets)
+    {
+    <li>@asset.Name</li>
+    }
+</ul>
+}

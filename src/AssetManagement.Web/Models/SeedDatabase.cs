@@ -6,11 +6,11 @@ namespace AssetManagement.Web.Models;
 // Generates desired number of random contacts.
 public class SeedDatabase
 {
-    private static IEnumerable<User> CreateUsers()
+    private static IEnumerable<ApplicationUser> CreateUsers()
     {
         return
         [
-            new User()
+            new ApplicationUser()
             {
                 FirstName = "Mac",
                 LastName = "Clayton",

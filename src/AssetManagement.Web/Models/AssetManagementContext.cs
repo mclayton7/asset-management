@@ -6,7 +6,7 @@ namespace AssetManagement.Web.Models;
 
 public class AssetManagementContext : DbContext
 {
-    public DbSet<User> Users { get; set; }
+    public DbSet<ApplicationUser> Users { get; set; }
     public DbSet<Asset> Assets { get; set; }
 
     public string DbPath { get; }

@@ -15,7 +15,7 @@ public class UserManagementService
         _dbContext = dbContext;
     }
 
-    public async Task<List<User>> GetAllUsers()
+    public async Task<List<ApplicationUser>> GetAllUsers()
     {
         return await _dbContext.Users.ToListAsync();
     }

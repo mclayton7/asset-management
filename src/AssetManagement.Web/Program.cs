@@ -1,8 +1,12 @@
 using AssetManagement.Web;
 using AssetManagement.Web.Components;
+using AssetManagement.Web.Components.Account;
 using AssetManagement.Web.Models;
 using AssetManagement.Web.Services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,9 +14,25 @@ using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// https://github.com/MudBlazor/MudBlazor/issues/6724
+builder.WebHost.UseWebRoot("wwwroot").UseStaticWebAssets();
+
 // Add services to the container.
 builder.Services.AddDbContextFactory<AssetManagementContext>(opt =>
     opt.UseSqlite($"Data Source={nameof(AssetManagementContext.DbPath)}.db"));
+
+// builder.Services.AddScoped<AuthenticationStateProvider, 
+//     CustomAuthenticationStateProvider>();
+// builder.Services.AddCascadingAuthenticationState();
+// builder.Services.AddScoped<IdentityUserAccessor>();
+// builder.Services.AddScoped<IdentityRedirectManager>();
+// builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+// builder.Services.AddAuthentication(options =>
+//     {
+//         options.DefaultScheme = IdentityConstants.ApplicationScheme;
+//         options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+//     })
+//     .AddIdentityCookies();
 
 builder.Services.AddScoped<UserManagementService>();
 builder.Services.AddScoped<AssetManagementService>();

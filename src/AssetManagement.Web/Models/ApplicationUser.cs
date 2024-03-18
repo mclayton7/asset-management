@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace AssetManagement.Web.Models;
 
-public class User
+public class ApplicationUser
 {
     public int Id { get; set; }
     public string FirstName { get; set; }
